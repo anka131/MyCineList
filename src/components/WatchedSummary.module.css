@@ -1,0 +1,89 @@
+.btnDelete {
+  position: absolute;
+  right: 2.4rem;
+
+  height: 1.8rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--color-red);
+  color: var(--color-background-900);
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btnDelete:hover {
+  background-color: var(--color-red-dark);
+}
+
+
+.summary {
+  padding: 2.2rem 3.2rem 1.8rem 3.2rem;
+  border-radius: 0.9rem;
+  background-color: var(--color-background-100);
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
+}
+
+.summary h2 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.summary div {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.summary p {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.movie {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 2rem;
+  align-items: center;
+
+  padding: 1.6rem 2.4rem;
+  border-bottom: 1px solid var(--color-background-100);
+  transition: background-color 0.3s;
+  cursor: default;
+}
+
+.movie:hover {
+  background-color: var(--color-background-100);
+}
+
+.poster {
+  width: 100%;
+  grid-row: 1 / -1;
+  border-radius: 0.4rem;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--color-text);
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;
+  font-size: 1.4rem;
+  color: var(--color-text-dark);
+}
+
+.stats p {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}

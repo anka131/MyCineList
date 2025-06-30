@@ -1,0 +1,48 @@
+
+.list {
+  list-style: none;
+  padding: 0.8rem 0;
+  overflow: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.listWatched {
+  height: calc(100% - 9rem);
+}
+
+.listItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 2.4rem;
+  font-size: 1.6rem;
+  align-items: center;
+  padding: 1.6rem 3.2rem;
+  border-bottom: 1px solid var(--color-background-100);
+}
+
+.listImage {
+  width: 100%;
+  grid-row: 1 / -1;
+}
+
+.listTitle {
+  font-size: 1.8rem;
+}
+
+.listInfo {
+  display: flex;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.listInfoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}

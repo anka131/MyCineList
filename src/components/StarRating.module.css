@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.stars {
+  display: flex;
+}
+
+.text {
+  line-height: 1;
+  margin: 0;
+}
