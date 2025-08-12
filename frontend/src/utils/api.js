@@ -1,8 +1,8 @@
 import axios from 'axios';
-const API_URL = import.meta.env.API_URL
+
 
 const API = axios.create({
-  baseURL: `${API_URL}/api` 
+  baseURL: 'https://mycinelist-00b6.onrender.com/api' 
 });
 
 export const getFavorites = (token) => {

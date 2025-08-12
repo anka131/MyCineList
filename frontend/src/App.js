@@ -3,7 +3,6 @@ import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import MainApp from './pages/MainApp';
 import Login from './pages/Login';
 import Register from './pages/Register';
-const API_URL = import.meta.env.API_URL;
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -37,7 +36,8 @@ export default function App() {
   // Token verification function
   const verifyToken = async (token) => {
     try {
-      const response = await fetch(`${API_URL}/api/users/verify`, {
+      
+      const response = await fetch('https://mycinelist-00b6.onrender.com/api/users/verify', {
         headers: {
           'Authorization': `Bearer ${token}`
         }

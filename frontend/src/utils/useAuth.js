@@ -1,6 +1,6 @@
 import { createContext, useState, useContext } from "react";
 import axios from "axios";
-const API_URL = import.meta.env.API_URL
+
 
 const AuthContext = createContext();
 
@@ -11,7 +11,7 @@ export const AuthProvider = ({ children }) => {
    const login = async (e, email, password) => {
   e.preventDefault();
   try {
-    const res = await axios.post(`${API_URL}/api/users/login`, { email, password });
+    const res = await axios.post('https://mycinelist-00b6.onrender.com/api/users/login', { email, password });
     
     // Verify token exists in response
     console.log('Login response:', res.data); // Check if token exists
@@ -32,7 +32,7 @@ export const AuthProvider = ({ children }) => {
     const register = async (e, username, email, password) => {
         e.preventDefault();
   try {
-    const res = await axios.post(`${API_URL}/api/users/register`, {username, email, password });
+    const res = await axios.post('https://mycinelist-00b6.onrender.com/api/users/register', {username, email, password });
     
     // Verify token exists in response
     console.log('Register response:', res.data); // Check if token exists
