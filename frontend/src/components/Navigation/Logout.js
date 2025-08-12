@@ -6,7 +6,7 @@ function Logout() {
   const navigate = useNavigate();
   const handleLogout = () => {
   localStorage.removeItem("token");
-  navigate("/login"); // or wherever you want to send the user
+  navigate("/login");
 };
   return (
     <button className={styles.themeToggle} onClick={handleLogout}>Logout</button>

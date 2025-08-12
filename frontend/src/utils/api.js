@@ -1,7 +1,8 @@
 import axios from 'axios';
+const API_URL = import.meta.env.API_URL
 
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api' 
+  baseURL: `${API_URL}/api` 
 });
 
 export const getFavorites = (token) => {
@@ -26,7 +27,6 @@ export const deleteFavorite = (imdbID, token) => {
 
 
 
-// Add request interceptor
 API.interceptors.request.use(config => {
   const token = localStorage.getItem('token');
   

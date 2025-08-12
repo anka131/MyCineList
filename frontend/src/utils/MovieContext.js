@@ -65,18 +65,18 @@ export const MovieProvider = function({ children }) {
 
 const handleDeleteWatched = async (imdbID) => {
   try {
-    // Frontend validation
+
     if (!imdbID) {
       throw new Error("No movie ID provided");
     }
 
-    // Optimistic update (remove immediately from UI)
+
     setWatched(prev => prev.filter(movie => movie.imdbID !== imdbID));
 
-    // Backend deletion
+
     const { data } = await deleteFavorite(imdbID, token);
     
-    // Sync with backend response (in case of conflicts)
+  
     setWatched(data);
   } catch (err) {
     console.error("Delete failed:", {
@@ -84,7 +84,7 @@ const handleDeleteWatched = async (imdbID) => {
       movieId: imdbID
     });
     
-    // Re-fetch to restore correct state
+
     const { data } = await getFavorites(token);
     setWatched(data);
     

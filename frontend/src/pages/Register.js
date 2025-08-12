@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Login.module.css";
 import { Link} from "react-router-dom";
+const API_URL = import.meta.env.API_URL;
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -18,14 +19,14 @@ function Register() {
     }
 
     try {
-       await fetch("http://localhost:5000/api/users/register", {
+       await fetch(`${API_URL}/api/users/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({username, email, password }),
       });
-      const res = await fetch("http://localhost:5000/api/users/login", {
+      const res = await fetch(`${API_URL}/api/users/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
